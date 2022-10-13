@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class JumpController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    //make the bird jump when the space key is pressed
+
+    [SerializeField] private float jumpForce = 10f;
+    public Rigidbody2D rb;
+
+    private void Start() {
+        //get the rigidbody component
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = Vector2.up * jumpForce;
+        }
     }
 }
