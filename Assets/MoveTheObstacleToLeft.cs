@@ -25,7 +25,7 @@ public class MoveTheObstacleToLeft : MonoBehaviour
     //event when this collision a game object that has tag "NewObstacleWall"
     private void OnCollisionEnter2D(Collision2D other) {
         if ( other.gameObject.CompareTag( "NewObstacleWall")){
-            Debug.Log("Spawn new obstacle");
+            // Debug.Log("Spawn new obstacle");
 
             //call a method from scripts of the Obstacles
             Obstacles.GetComponent<SpawnNewObstacle>().SpawnNewPairOfPipes();

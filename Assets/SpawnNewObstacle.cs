@@ -15,7 +15,7 @@ public class SpawnNewObstacle : MonoBehaviour
         newPairOfPipes.transform.position = this.transform.position;
         
         //log the position of new Pair of Pipes
-        Debug.Log("New Pair of Pipes position: " + newPairOfPipes.transform.position);
+        // Debug.Log("New Pair of Pipes position: " + newPairOfPipes.transform.position);
     }
 
 }
