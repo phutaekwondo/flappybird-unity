@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - LeftInMindWall
+  - Obstacle
+  - Ground
+  - Bird
   layers:
   - Default
   - TransparentFX
@@ -14,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Bird
+  - Ground
+  - Imagination
   - 
   - 
   - 
@@ -41,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstacle
+    uniqueID: 614951565
+    locked: 0
+  - name: Bird
+    uniqueID: 2903851875
+    locked: 0
+  - name: Ground
+    uniqueID: 913250129
     locked: 0
