@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//import GameConfig
 
 public class RunGround : MonoBehaviour
 {
-    [SerializeField] float speed = 1;
+    private float speed = 1;
+
     Vector2 startPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        //set speed to GameConfig.Speed
+        speed = GameConfig.Speed;
+
         startPosition = transform.position;
     }
 
@@ -30,7 +35,8 @@ public class RunGround : MonoBehaviour
     // }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if ( other.gameObject.CompareTag( "Finish")){
+        //if collides with object has layer "Imagination" the reset the position
+        if ( other.gameObject.layer == LayerMask.NameToLayer("Imagination")){
             ResetPosition();
         }
     }
