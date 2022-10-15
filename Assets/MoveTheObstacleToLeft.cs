@@ -30,5 +30,9 @@ public class MoveTheObstacleToLeft : MonoBehaviour
             //call a method from scripts of the Obstacles
             Obstacles.GetComponent<SpawnNewObstacle>().SpawnNewPairOfPipes();
         }
+        if ( other.gameObject.CompareTag( "DestroyObstacleWall")){
+            // Debug.Log("Destroy obstacle");
+            Destroy(transform.gameObject);
+        }
     }
 }

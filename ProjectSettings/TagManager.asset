@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Bird
   - NewObstacleWall
+  - DestroyObstacleWall
   layers:
   - Default
   - TransparentFX
