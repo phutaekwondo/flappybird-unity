@@ -6,6 +6,8 @@ public class GameConfig : MonoBehaviour
 {
     [SerializeField] static public float Speed = 2f;
 
+    static public uint Score = 1;
+
     //these variables below are used to control the state of the game
     static public bool isMovingGround = false;
     static public bool isMovingObstacles = false;

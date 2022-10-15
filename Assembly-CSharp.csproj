@@ -36,13 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\BirdStateManager.cs" />
      <Compile Include="Assets\SpawnNewObstacle.cs" />
      <Compile Include="Assets\MoveTheObstacleToLeft.cs" />
      <Compile Include="Assets\JumpController.cs" />
      <Compile Include="Assets\RunGround.cs" />
      <Compile Include="Assets\GameConfig.cs" />
      <Compile Include="Assets\StateManager.cs" />
-     <Compile Include="Assets\BirdStateManager.cs" />
+     <Compile Include="Assets\ScoreController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
