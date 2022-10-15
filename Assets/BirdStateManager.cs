@@ -5,11 +5,17 @@ using UnityEngine;
 public class BirdStateManager : MonoBehaviour
 {
     Vector2 startPosition;
+    bool isChangeStateFromPlayingToDead = false;
 
     private void Start() {
         startPosition = transform.position;
     }
     private void Update() {
+        StartTheCurrentState();
+    }
+
+    void StartTheCurrentState()
+    {
         //switch the currentGameState
         switch (GameConfig.currentGameState)
         {

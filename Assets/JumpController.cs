@@ -19,7 +19,21 @@ public class JumpController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            rb.velocity = Vector2.up * jumpForce;
+            Debug.Log("Jump");
+
+            // if the current state is Waiting, then change the state to Playing
+            if (GameConfig.currentGameState == StateManager.GameState.Waiting)
+            {
+                GameConfig.isChangeStateFromWaitingToPlaying = true;
+            }
+
+            Jump();
         }
+    }
+
+    void Jump()
+    {
+            rb.velocity = Vector2.up * jumpForce;
+
     }
 }
