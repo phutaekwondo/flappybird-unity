@@ -19,7 +19,10 @@ public class MoveTheObstacleToLeft : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        if (GameConfig.isMovingObstacles)
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
     }
 
     //event when this collision a game object that has tag "NewObstacleWall"

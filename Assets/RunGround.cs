@@ -21,10 +21,13 @@ public class RunGround : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 currentPosition = transform.position;
-        currentPosition.x -= speed * Time.deltaTime;
+        if (GameConfig.isMovingGround)
+        {
+            Vector2 currentPosition = transform.position;
+            currentPosition.x -= speed * Time.deltaTime;
 
-        transform.position = currentPosition;
+            transform.position = currentPosition;
+        }
     }
 
 
