@@ -72,6 +72,10 @@ public class StateManager : MonoBehaviour
                     if (GameConfig.isChangeStateFromWaitingToPlaying)
                     {
                         GameConfig.currentGameState = StateManager.GameState.Playing;
+
+                        //call the bird jump method
+                        GameObject.Find("Bird").GetComponent<JumpController>().Jump();
+
                         GameConfig.isChangeStateFromWaitingToPlaying = false;
                     }
                 }
@@ -89,7 +93,22 @@ public class StateManager : MonoBehaviour
                 {
                     if (GameConfig.isChangeStateFromDeadToWaiting)
                     {
-                        GameConfig.currentGameState = StateManager.GameState.Dead;
+                        GameConfig.currentGameState = StateManager.GameState.Waiting;
+
+                        //clear the obstacles
+                        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+                        foreach (GameObject obstacle in obstacles)
+                        {
+                            Destroy(obstacle);
+                        }
+
+                        //set isspawnnewobstacle to true
+                        GameConfig.isSpawingObstacle = true;
+                        GameConfig.isSpawnNewObstacle = true;
+
+                        //set isresetbirdposition to true
+                        GameConfig.isResetBirdPosition = true;
+
                         GameConfig.isChangeStateFromDeadToWaiting = false;
                     }
 

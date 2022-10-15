@@ -25,4 +25,12 @@ public class SpawnNewObstacle : MonoBehaviour
         // Debug.Log("New Pair of Pipes position: " + newPairOfPipes.transform.position);
     }
 
+    private void Update() {
+        if (GameConfig.isSpawnNewObstacle){
+            Debug.Log("SpawnNewObstacle.cs: SpawnNewPairOfPipes()");
+            SpawnNewPairOfPipes();
+            GameConfig.isSpawnNewObstacle = false;
+        }
+    }
+
 }

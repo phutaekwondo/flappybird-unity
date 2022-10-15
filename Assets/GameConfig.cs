@@ -12,6 +12,10 @@ public class GameConfig : MonoBehaviour
     static public bool isBirdFalling = false;
     static public bool isSpawingObstacle = false;
 
+    //if set below variables to true, then set it to false when signalled
+    static public bool isResetBirdPosition = false;
+    static public bool isSpawnNewObstacle = false;
+
     // if set these variables below to true, it will affect the state of the game, and it will be set to true in the StateManager script
     static public bool isChangeStateFromWaitingToPlaying = false;
     static public bool isChangeStateFromPlayingToDead = false;

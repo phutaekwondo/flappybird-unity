@@ -19,7 +19,7 @@ public class JumpController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Jump");
+            // Debug.Log("Jump");
 
             // if the current state is Waiting, then change the state to Playing
             if (GameConfig.currentGameState == StateManager.GameState.Waiting)
@@ -27,11 +27,17 @@ public class JumpController : MonoBehaviour
                 GameConfig.isChangeStateFromWaitingToPlaying = true;
             }
 
+            //ig the current state is dead, then change the state to Waiting
+            if (GameConfig.currentGameState == StateManager.GameState.Dead)
+            {
+                GameConfig.isChangeStateFromDeadToWaiting = true;
+            }
+
             Jump();
         }
     }
 
-    void Jump()
+    public void Jump()
     {
             rb.velocity = Vector2.up * jumpForce;
 
