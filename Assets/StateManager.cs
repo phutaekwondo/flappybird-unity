@@ -37,6 +37,7 @@ public class StateManager : MonoBehaviour
         GameConfig.isMovingObstacles = false;
         GameConfig.isSpawingObstacle = false;
         GameConfig.isBirdFalling = false;
+        GameConfig.Score = 0;
 
         // Debug.Log("Waiting");
         // //call the gameconfig.logallinfo method
@@ -84,6 +85,9 @@ public class StateManager : MonoBehaviour
                 {
                     if (GameConfig.isChangeStateFromPlayingToDead)
                     {
+                        //call the bird throw to right method
+                        GameObject.Find("Bird").GetComponent<JumpController>().ThrowToRight();
+
                         GameConfig.currentGameState = StateManager.GameState.Dead;
                         GameConfig.isChangeStateFromPlayingToDead = false;
                     }

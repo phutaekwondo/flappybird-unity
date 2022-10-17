@@ -6,12 +6,16 @@ public class BirdStateManager : MonoBehaviour
 {
     Vector2 startPosition;
 
+    JumpController jumpController;
+
     //declare the start rotation of z axis
     Quaternion startRotation;
 
     private void Start() {
         startPosition = transform.position;
         startRotation = transform.rotation;
+
+        jumpController = GetComponent<JumpController>();
     }
     private void Update() {
         StartTheCurrentState();
@@ -60,6 +64,7 @@ public class BirdStateManager : MonoBehaviour
     }
 
     void StartDeadState(){
+
         //free movement of the bird
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }

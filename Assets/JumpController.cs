@@ -42,4 +42,8 @@ public class JumpController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
 
     }
+
+    public void ThrowToRight(){
+        rb.velocity = Vector2.right * GameConfig.Speed;
+    }
 }
