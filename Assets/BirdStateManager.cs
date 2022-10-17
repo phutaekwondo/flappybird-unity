@@ -77,4 +77,14 @@ public class BirdStateManager : MonoBehaviour
             }
         }
     }
+
+    //if trigger collision with the object has tag "IncreaseScoreWall"
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "IncreaseScoreWall")
+        {
+            //increase the score
+            GameConfig.isIncreaseScore = true;
+        }
+    }
+
 }

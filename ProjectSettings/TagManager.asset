@@ -10,6 +10,7 @@ TagManager:
   - Bird
   - NewObstacleWall
   - DestroyObstacleWall
+  - IncreaseScoreWall
   layers:
   - Default
   - TransparentFX
